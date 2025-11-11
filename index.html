@@ -3,15 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minal’s Code Collection</title>
+  <title>AIML Codes by Minal</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #0d1117;
+      color: #e6edf3;
+      padding: 20px;
+    }
+    h1 {
+      color: #58a6ff;
+    }
+    pre {
+      background-color: #161b22;
+      border-radius: 8px;
+      padding: 15px;
+      overflow-x: auto;
+      line-height: 1.5;
+      font-size: 15px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My AIML Code Collection 🚀</h1>
-  <p>Here you can explore all my projects and code files.</p>
+  <h1>🚀 AIML Code Collection</h1>
+  <h2>BFS Algorithm (Python)</h2>
 
-  <ul>
-    <li><a href="https://github.com/minal440/AIML_Codes/tree/main/Project1">Project 1</a></li>
-    <li><a href="https://github.com/minal440/AIML_Codes/tree/main/Project2">Project 2</a></li>
-  </ul>
+  <pre>
+from collections import deque
+
+def bfs(graph, start_node, goal_node):
+    visited = []
+    queue = deque([start_node])
+
+    while queue:
+        node = queue.popleft()
+
+        if node not in visited:
+            print(node, end=" ")
+            visited.append(node)
+
+            if node == goal_node:
+                print("\nGoal Node Found:", goal_node)
+                return
+
+            for neighbour in graph[node]:
+                if neighbour not in visited and neighbour not in queue:
+                    queue.append(neighbour)
+
+    print("\nGoal Node NOT Found in Graph.")
+
+if __name__ == "__main__":
+    graph = {
+        'A': ['B', 'C', 'D'],
+        'B': ['E', 'F'],
+        'C': [],
+        'D': ['L', 'M', 'N'],
+        'E': [],
+        'F': ['G', 'H'],
+        'G': [],
+        'H': [],
+        'L': [],
+        'M': [],
+        'N': []
+    }
+
+    start = 'A'
+    goal = 'H'
+
+    print("Graph:", graph)
+    print("Start:", start)
+    print("Goal:", goal)
+    print("--------------------------")
+
+    bfs(graph, start, goal)
+  </pre>
 </body>
 </html>
