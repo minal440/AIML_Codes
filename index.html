@@ -1,59 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIML Codes Repository</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            color: #58a6ff;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background-color: #161b22;
-            margin: 10px 0;
-            padding: 12px;
-            border-radius: 8px;
-        }
-        a {
-            color: #58a6ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            margin-top: 40px;
-            color: #8b949e;
-            font-size: 0.9em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIML Codes Repository</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #161b22;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #30363d;
+    }
+    header h1 {
+      color: #58a6ff;
+      margin: 0;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: 0.2s ease-in-out;
+    }
+    .card:hover {
+      background-color: #1e2632;
+      transform: translateY(-2px);
+    }
+    a {
+      text-decoration: none;
+      color: #58a6ff;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      color: #8b949e;
+      padding: 30px;
+      border-top: 1px solid #30363d;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
+  <header>
     <h1>🚀 AIML Codes Repository</h1>
-    <p>Click below to view or download files from this repository:</p>
-    
-    <ul>
-        <li><a href="Astar.py" target="_blank">A* Algorithm (Astar.py)</a></li>
-        <li><a href="BFS.py" target="_blank">Breadth First Search (BFS.py)</a></li>
-        <li><a href="dfs.py" target="_blank">Depth First Search (dfs.py)</a></li>
-        <li><a href="Minimax.py" target="_blank">Minimax Algorithm (Minimax.py)</a></li>
-        <li><a href="Decision_tree.ipynb" target="_blank">Decision Tree (Decision_tree.ipynb)</a></li>
-    </ul>
+    <p>Collection of essential AI & ML algorithms implemented in Python</p>
+  </header>
 
-    <footer>
-        © 2025 AIML_Codes | Maintained by minal440
-    </footer>
+  <main>
+    <div class="card">
+      <h2>📊 Linear Regression</h2>
+      <p>Implements simple linear regression with error metrics, best-fit line, and residual analysis.</p>
+      <a href="lr.py" target="_blank">View Code →</a>
+    </div>
+
+    <div class="card">
+      <h2>🧩 K-Means Clustering</h2>
+      <p>Performs unsupervised clustering with the Elbow Method and visualizes cluster centers.</p>
+      <a href="kmeans.py" target="_blank">View Code →</a>
+    </div>
+
+    <div class="card">
+      <h2>🤝 K-Nearest Neighbors (KNN)</h2>
+      <p>Classifies data points based on nearest neighbors with accuracy and confusion matrix plots.</p>
+      <a href="knn.py" target="_blank">View Code →</a>
+    </div>
+
+    <div class="card">
+      <h2>🔍 Principal Component Analysis (PCA)</h2>
+      <p>Performs dimensionality reduction, variance analysis, and visualizes the first two components.</p>
+      <a href="pca.py" target="_blank">View Code →</a>
+    </div>
+
+    <div class="card">
+      <h2>🌳 Decision Tree</h2>
+      <p>Implements decision tree classification and visualizes the tree structure using sklearn.</p>
+      <a href="dt.py" target="_blank">View Code →</a>
+    </div>
+
+    <div class="card">
+      <h2>🧠 Search Algorithms (AI)</h2>
+      <ul>
+        <li><a href="Astar.py" target="_blank">A* Search</a></li>
+        <li><a href="BFS.py" target="_blank">Breadth-First Search</a></li>
+        <li><a href="dfs.py" target="_blank">Depth-First Search</a></li>
+        <li><a href="Minimax.py" target="_blank">Minimax Algorithm</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 AIML_Codes | Created by <strong>minal440</strong></p>
+  </footer>
 </body>
 </html>
