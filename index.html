@@ -1,81 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AIML Codes by Minal</title>
-  <style>
-    body {
-      font-family: 'Courier New', monospace;
-      background-color: #0d1117;
-      color: #e6edf3;
-      padding: 20px;
-    }
-    h1 {
-      color: #58a6ff;
-    }
-    pre {
-      background-color: #161b22;
-      border-radius: 8px;
-      padding: 15px;
-      overflow-x: auto;
-      line-height: 1.5;
-      font-size: 15px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIML Codes Repository</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #58a6ff;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #161b22;
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 8px;
+        }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 40px;
+            color: #8b949e;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-  <h1>🚀 AIML Code Collection</h1>
-  <h2>BFS Algorithm (Python)</h2>
+    <h1>🚀 AIML Codes Repository</h1>
+    <p>Click below to view or download files from this repository:</p>
+    
+    <ul>
+        <li><a href="Astar.py" target="_blank">A* Algorithm (Astar.py)</a></li>
+        <li><a href="BFS.py" target="_blank">Breadth First Search (BFS.py)</a></li>
+        <li><a href="dfs.py" target="_blank">Depth First Search (dfs.py)</a></li>
+        <li><a href="Minimax.py" target="_blank">Minimax Algorithm (Minimax.py)</a></li>
+        <li><a href="Decision_tree.ipynb" target="_blank">Decision Tree (Decision_tree.ipynb)</a></li>
+    </ul>
 
-  <pre>
-from collections import deque
-
-def bfs(graph, start_node, goal_node):
-    visited = []
-    queue = deque([start_node])
-
-    while queue:
-        node = queue.popleft()
-
-        if node not in visited:
-            print(node, end=" ")
-            visited.append(node)
-
-            if node == goal_node:
-                print("\nGoal Node Found:", goal_node)
-                return
-
-            for neighbour in graph[node]:
-                if neighbour not in visited and neighbour not in queue:
-                    queue.append(neighbour)
-
-    print("\nGoal Node NOT Found in Graph.")
-
-if __name__ == "__main__":
-    graph = {
-        'A': ['B', 'C', 'D'],
-        'B': ['E', 'F'],
-        'C': [],
-        'D': ['L', 'M', 'N'],
-        'E': [],
-        'F': ['G', 'H'],
-        'G': [],
-        'H': [],
-        'L': [],
-        'M': [],
-        'N': []
-    }
-
-    start = 'A'
-    goal = 'H'
-
-    print("Graph:", graph)
-    print("Start:", start)
-    print("Goal:", goal)
-    print("--------------------------")
-
-    bfs(graph, start, goal)
-  </pre>
+    <footer>
+        © 2025 AIML_Codes | Maintained by minal440
+    </footer>
 </body>
 </html>
